@@ -16,22 +16,24 @@ span1.onclick = function() {
   modal1.style.display = "none";
 }
 
-/** @param
- {Element} node */
-function  isInsideModal(node) {
+/** 
+ * @param{Element} node 
+ * @param {string} selector
+ * */
+
+function  isInside(node, selector) {
   if (!node) return false
-  return node.classList.contains("modal") || isInsideModal(node.parentElement);
+  return node.matches(selector) || isInside(node.parentElement);
 }
 
-window.onclick = e => {
-  if (!isInsideModal(e.currentTarget)) {
-    for (const el of document.querySelectorAll(".modal")) {
-      el.style.display = "none";
+for (const modal of document.getElementsByClassName('modal')) {
+  modal.onclick = (e) => {
+    if (e.target === e.currentTarget && !isInside(e.target, '.modal-content'))
+    {
+      modal.style.display= 'none';
     }
+  }
 }
-}
-
-
 
 var modal2 = document.getElementById("edbio");
 
