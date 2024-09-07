@@ -16,9 +16,11 @@ span1.onclick = function() {
   modal1.style.display = "none";
 }
 
-function isInsideModal(node) {
+/** @param
+ {Element} node */
+function  isInsideModal(node) {
   if (!node) return false
-  return node.classList.contains(".modal") || isInsideModal(node.parentElement);
+  return node.classList.contains("modal") || isInsideModal(node.parentElement);
 }
 
 window.onclick = e => {
