@@ -1,0 +1,328 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+/* Imported from BookPromo */
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+#shopping a {
+color: red;
+}
+
+#socmed a {
+color: blue;
+}
+
+nav {
+  display: flex;
+  background-color: red;
+  border: 5px solid rgb(84, 0, 0);
+  border-radius: 25px;
+  height: fit-content;
+  width: 100%;
+}
+
+#navframe {
+display: flex;
+margin: auto;
+height: inherit;
+}
+
+#Ouroboros {
+display: block;
+  height: 256px;
+  width: 256px;
+  border: 5px solid rgb(84, 0, 0);
+  border-radius: 25px;
+  margin: auto;
+  anchor-name: --"Uro";
+}
+
+nav button {
+display: block;
+border: 5px solid rgb(84,0,0);
+background-color: rgb(0,0,0);
+color: black;
+text-align:center;
+width: 100%;
+height: 100%;
+font-size: 24pt;
+border-radius:25px;
+}
+
+
+#shopping button {
+display: block;
+border: 5px solid rgb(84,0,0);
+background-color: rgb(0,0,0);
+color: red;
+text-align:center;
+margin: auto;
+width: 70%;
+height: 100%;
+font-size: 36pt;
+border-radius:25px;
+}
+
+#socmed button {
+display: block;
+border: 5px solid rgb(22, 0, 118);
+background-color: rgb(234, 234, 234);
+color: blue;
+text-align:center;
+text-wrap: wrap;
+margin: auto;
+width: 70%;
+height: 100%;
+font-size: 36pt;
+border-radius:25px;
+}
+
+
+nav a {
+color:red;
+text-align: center;
+}
+
+nav ul {
+height: 100%;
+width: 30%;
+margin: auto;
+}
+
+nav li{
+position: relative;
+  margin: auto;
+}
+
+#Fiction {
+position-anchor: left;
+display: block;
+height: 128px;
+width: 300px;
+margin-top: 5px;
+}
+
+#Business {
+position-anchor: right;
+display: block;
+height: 128px;
+width: 300px;
+margin-top: 5px;
+}
+
+
+
+article {
+  display: flex;
+  background-color: black;
+  color: black;
+  max-width: 95%;
+  padding-bottom: 5px;
+  margin: auto;
+
+}
+
+.active {
+  color: white;
+}
+
+.book {
+  background-color: red;
+  color: black;
+  margin: 60px;
+  border: 5px solid rgb(84, 0, 0);
+  border-radius: 25px;
+  width: 30%;
+}
+
+.book img {
+  display: block;
+  width: 140px;
+  height: 220px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h2 {
+  height: 5%;
+  text-align:center;
+  border-top: 5px solid rgb(84,0,0);
+}
+
+h3 {
+  background-color: black;
+  color: red;
+  width: 90%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px outset rgb(84, 0, 0);
+  border-radius: 25px;
+}
+
+#shopping h3 {
+font-size: 48pt;
+}
+
+#socmed h3 {
+font-size: 48pt;
+color: blue;
+background-color: rgb(234, 234, 234);
+border: 5px outset blue;
+border-radius: 25px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 80%;
+  background-color: red;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin: auto;
+}
+
+.grid-item {
+  display: grid;
+  background-color: red;
+  border: 5px solid #000000;
+  text-align: center;
+
+}
+
+.grid-item button {
+  background-color: red;
+  border: 1px solid black;
+}
+
+.grid-item img {
+  border: 5px solid black;
+  margin: auto;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-header {
+  height:10px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: flex;
+  background-color: red;
+  margin: 15% auto; /* 15% from the top and centered */
+  border: 15px solid black;
+  border-radius: 25px;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal-info {
+  width: 50%;
+  border-right:5px solid black;
+}
+
+.modal-info img {
+  display: block;
+  margin: auto;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+.modal-bio {
+  width: 50%;
+  border-left: 5px solid black;
+  padding: 5px;
+}
+
+.charname {
+  text-align: center;
+  font-size: large;
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+} 
+
+#edbio .modal-content {
+  background-color: blue;
+  color: white;
+}
+
+#edbio .close {
+  color: white;
+}
+
+#lsbio .modal-content {
+  background-color: goldenrod;
+}
+
+#axbio .modal-content {
+  background-color: purple;
+  color: white;
+}
+
+#dkbio .modal-content {
+  background-color: green;
+}
+
+#fkbio .modal-content {
+  background-color: rgb(0, 158, 108);
+}
+
+#lgbio .modal-content {
+  background-color: gray;
+}
+
+#pdbio .modal-content {
+  background-color: white;
+}
+
+#kmbio .modal-content {
+  background-color: cyan;
+}
+
+#cmbio .modal-content {
+  background-color: magenta;
+}
+
+#mmbio .modal-content {
+  background-color: orange;
+}
+
+#tmbio .modal-content {
+  background-color: rgb(0, 0, 74);
+  color: white;
+}
+
+#tmbio .close {
+  color: white;
+}
