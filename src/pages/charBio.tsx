@@ -1,12 +1,18 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
+import {useState, useEffect} from 'react'
+import { NavLink, useParams } from 'react-router-dom';
+import ProfileGallery from '../../components/ProfileGallery';
+import Characters from '../CharInfo.json';
+import Character from '../../components/ProfileGallery'
 
 const charBio = () => {
+  const {id} = useParams();
+  const CharCard = ProfileGallery(id);
+  
   return (
     <>
     <div className="grid-container">
     <div className="grid-item">James Forge
-        <button id="jf"><NavLink to='CharBio/:id'><img src="../../../images/chargal/james.png"></img></NavLink></button>
+        <button key={`CharCard.id`}><NavLink to={`CharBio/${id}`}><img src="../../../images/chargal/james.png"></img></NavLink></button>
     </div>
     <div className="grid-item">Eric Brooks
         <button id="ed"> <img src="../../../images/chargal/eric.png"></img></button>

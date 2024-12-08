@@ -19,9 +19,9 @@ const router = createBrowserRouter(
     <Route path='/' element={<TyrLayout />}>
       <Route index element={<BookBlurb />} />
       <Route path='/characters' element={<CharBio />} />
+      <Route path='/characters/:id' Component={ProfileGallery}/>
       <Route path='/shopLinks' element={<ShopLinks />} />
       <Route path='/sociallinks' element={<SocialLinks />} />
-      <Route path='/characters/:charID' Component={ProfileGallery}/>
       <Route path='*' element={<BookBlurb />} />
     </Route>
   )
