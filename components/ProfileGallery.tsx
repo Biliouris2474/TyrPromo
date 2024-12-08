@@ -1,9 +1,12 @@
-import React from 'react';
+import {useState, useEffect} from 'react'
+import { NavLink, useParams } from 'react-router-dom';
 import Characters from '../src/CharInfo.json';
 
 
 
 let ProfileGallery = () => {
+  const {id} = useParams();
+
   return (
 <div>
   {Characters["Characters"].map((Character, id)=>(
