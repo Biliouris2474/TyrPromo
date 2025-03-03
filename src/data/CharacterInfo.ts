@@ -12,6 +12,18 @@ export interface CharacterInfoModel {
     color: string
 }
 
+// from: https://www.reddit.com/r/react/comments/1aitdhu/comment/koxuq75/
+const allImages: string[] = Object.values(import.meta.glob('@/assets/images/chargal/*.png',
+    {eager: true, import: 'default'},
+));
+
+export const GetImage = (charInfo: CharacterInfoModel) => {
+    return allImages.find(img => img.includes(
+        charInfo.imageAlias
+        ?? charInfo.charName.split(" ")[0].toLowerCase())
+    );
+};
+
 export const CharacterInfo: CharacterInfoModel[] = [
     {
         "id": "jfbio",

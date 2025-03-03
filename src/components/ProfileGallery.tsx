@@ -1,5 +1,5 @@
 import {useParams} from 'react-router-dom';
-import {CharacterInfo} from "../data/character-info.ts";
+import {CharacterInfo, GetImage} from "@/data/CharacterInfo.ts";
 
 
 let ProfileGallery = () => {
@@ -16,7 +16,7 @@ let ProfileGallery = () => {
                                 <span className="close">&times;</span>
                             </div>
                             <div className="modal-info">
-                                <img src="../../../images/chargal/james.png"></img>
+                                <img src={GetImage(characterInfo)}></img>
                                 <p className="charname">{characterInfo.charName}</p>
                                 <p>Age:{characterInfo.age}</p>
                                 <p>Birthday: {characterInfo.birthday}</p>

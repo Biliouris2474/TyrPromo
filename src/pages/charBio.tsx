@@ -1,7 +1,9 @@
 import {NavLink} from 'react-router-dom';
-import {CharacterInfo} from "../data/CharacterInfo.ts";
+import {CharacterInfo, GetImage} from "@/data/CharacterInfo.ts";
 
 const charBio = () => {
+
+
     return (
         <>
             <div className="grid-container">
@@ -9,10 +11,7 @@ const charBio = () => {
                     return <div key={charInfo.id} className="grid-item">{charInfo.charName}
                         <button>
                             <NavLink to={`${charInfo.id}`}>
-                                <img src={`/images/chargal/${
-                                    charInfo.imageAlias
-                                    ?? charInfo.charName.split(" ")[0].toLowerCase()
-                                }.png`}></img>
+                                <img src={GetImage(charInfo)}></img>
                             </NavLink>
                         </button>
                     </div>;
