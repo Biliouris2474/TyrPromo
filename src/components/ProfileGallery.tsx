@@ -1,5 +1,5 @@
 import {useParams} from 'react-router-dom';
-import {CharacterInfo} from "../data/CharacterInfo.ts";
+import {CharacterInfo} from "../data/character-info.ts";
 
 
 let ProfileGallery = () => {

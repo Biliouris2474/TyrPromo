@@ -1,5 +1,5 @@
 import {NavLink} from 'react-router-dom';
-import {CharacterInfo} from "../data/CharacterInfo.ts";
+import {CharacterInfo} from "../data/character-info.ts";
 
 const charBio = () => {
     return (
