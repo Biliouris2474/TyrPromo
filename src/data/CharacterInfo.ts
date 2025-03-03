@@ -13,10 +13,18 @@ export interface CharacterInfoModel {
 }
 
 // from: https://www.reddit.com/r/react/comments/1aitdhu/comment/koxuq75/
+// we need to get images during build time, but we can try to at least map what's their path
+// with the helper function below
 const allImages: string[] = Object.values(import.meta.glob('@/assets/images/chargal/*.png',
     {eager: true, import: 'default'},
 ));
 
+/**
+ * Get equivalent image for given character
+ * @param charInfo
+ * @return valid .png image stored in chargal. it does not accept *.jpg unless you set it up
+ * see https://vite.dev/guide/features#glob-import
+ */
 export const GetImage = (charInfo: CharacterInfoModel) => {
     return allImages.find(img => img.includes(
         charInfo.imageAlias
