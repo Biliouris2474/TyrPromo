@@ -1,5 +1,3 @@
-import React from 'react'
-
 const SocialLinks = () => {
   return (
       <div id="socmed">

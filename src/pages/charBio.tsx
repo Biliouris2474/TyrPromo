@@ -1,56 +1,25 @@
-import {useState, useEffect} from 'react'
-import { NavLink, useParams } from 'react-router-dom';
-import ProfileGallery from '../../components/ProfileGallery';
-import Characters from '../CharInfo.json';
-import Character from '../../components/ProfileGallery'
+import {NavLink} from 'react-router-dom';
+import {CharacterInfo, GetImage} from "@/data/CharacterInfo.ts";
 
 const charBio = () => {
-  const {id} = useParams();
-  const CharCard = ProfileGallery(id);
-  
-  return (
-    <>
-    <div className="grid-container">
-    <div className="grid-item">James Forge
-        <button key={`CharCard.id`}><NavLink to={`CharBio/${id}`}><img src="../../../images/chargal/james.png"></img></NavLink></button>
-    </div>
-    <div className="grid-item">Eric Brooks
-        <button id="ed"> <img src="../../../images/chargal/eric.png"></img></button>
-    </div>
-    <div className="grid-item">Laura Stanton
-        <button id="ls"> <img src="../../../images/chargal/laura.png"></img></button>
-    </div>
-    <div className="grid-item">Amanda Xun
-        <button id="ax"> <img src="../../../images/chargal/amanda.png"></img></button>
-    </div>
-    <div className="grid-item">Dean Knox
-        <button id="dk"> <img src="../../../images/chargal/dean.png"></img></button>
-    </div>
-    <div className="grid-item">Fiona Kramer
-        <button id="fk"> <img src="../../../images/chargal/fiona.png"></img></button>
-    </div>
-    <div className="grid-item">Lawrence Gabriels
-        <button id="lg"> <img src="../../../images/chargal/lawrence.png"></img></button>
-    </div>
-    <div className="grid-item">Patrick Dempsey
-        <button id="pd"> <img src="../../../images/chargal/patrick.png"></img></button>
-    </div>
-    <div className="grid-item">Kieran
-        <button id="km"> <img src="../../../images/chargal/kieran.png"></img></button>
-    </div>
-    <div className="grid-item">Claire
-        <button id="cm"> <img src="../../../images/chargal/claire.png"></img></button>
-    </div>
-    <div className="grid-item">LMS02-Morgan
-        <button id="mm"> <img src="../../../images/chargal/morgan.png"></img></button>
-    </div>
-    <div className="grid-item">LMS01-Typhon
-        <button id="tm"> <img src="../../../images/chargal/typhon.png"></img></button>
-    </div>
-</div>
 
 
-{/* 
+    return (
+        <>
+            <div className="grid-container">
+                {CharacterInfo.map((charInfo) => {
+                    return <div key={charInfo.id} className="grid-item">{charInfo.charName}
+                        <button>
+                            <NavLink to={`${charInfo.id}`}>
+                                <img src={GetImage(charInfo)}></img>
+                            </NavLink>
+                        </button>
+                    </div>;
+                })}
+            </div>
+
+
+            {/*
 <div id="jfbio" className="modal">
 <div className="modal-content">
 <div className="modal-header">
@@ -286,8 +255,8 @@ const charBio = () => {
       </div>
      */}
 
-</>
-  )
-}
+        </>
+    );
+};
 
 export default charBio;
